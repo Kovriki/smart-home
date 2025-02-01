@@ -1,3 +1,11 @@
+:root {
+  --bg-dark: #0D0D0D;
+  --text-light: #E0E0E0;
+  --shadow-light: rgba(255, 255, 255, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+}
+
+
 .App {
   text-align: center;
 }
@@ -41,4 +49,36 @@
   margin: auto;
   border: 10px solid gray;
   border-radius: 30px;
+
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --bg-dark: #0D0D0D;
+  --text-light: #E0E0E0;
+  --shadow-light: rgba(255, 255, 255, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+  margin-left: calc(50vw - 220px);
+}
+
+
+
+
+.grid {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
 }

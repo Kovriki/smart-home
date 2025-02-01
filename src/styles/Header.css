@@ -1,15 +1,11 @@
 .header {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #007bff;
+    background-color: #717f8e;
     color: white;
-
-    display: flex;
-    width: 400px;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: row;
   }
   
@@ -24,9 +20,9 @@
   }
   
   .menu {
-    position: absolute;
+    /* position: absolute; */
     top: 70px;  /* Располагаем меню чуть ниже */
-    left: 10px;
+    /* left: 10px; */
     background-color: white;
     color: black;
     border: 1px solid #ccc;

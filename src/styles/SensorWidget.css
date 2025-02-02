@@ -1,0 +1,81 @@
+.sensorWidget{
+    display: flex;
+    padding: 12px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.widgetName {
+    color: rgba(255, 255, 255, 0.80);
+    font-family: "IBM Plex Mono";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.dataBox {
+    display: flex;
+    width: 395px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dataBoxExtra{
+    display: flex;
+    width: 49px;
+    padding-top: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.dataValue.large {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: -14px;
+}
+
+.dataValue.large p:first-child {
+    color: rgba(255, 255, 255, 0.80);
+    font-family: "YS Text";
+    font-size: 71.322px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.dataValue.large p:last-child {
+    color: rgba(255, 255, 255, 0.80);
+    font-family: "YS Text";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: -14px;
+}
+
+.dataValue.small {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    align-self: stretch;
+    color: rgba(255, 255, 255, 0.80);
+    font-family: "YS Text";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+/* .separetor.vertical{
+    display: flex;
+    align-items: center;
+
+} */

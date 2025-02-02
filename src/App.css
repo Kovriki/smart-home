@@ -1,3 +1,18 @@
+@import url('./styles/reset.css');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@font-face {
+  font-family:'YS Text';
+  src: url(./assets/fonts/YS\ Text-Light.ttf);
+  font-style: normal; 
+  font-weight: 300; 
+}
+@font-face {
+  font-family:'YS Text';
+  src: url(./assets/fonts/YS\ Text-Regular.ttf);
+  font-style: normal; 
+  font-weight: 400; 
+}
+
 :root {
   --bg-dark: #0D0D0D;
   --text-light: #E0E0E0;

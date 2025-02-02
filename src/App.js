@@ -4,6 +4,7 @@ import React from 'react';
 import Button from './components/Button';
 import Header from './components/Header';
 import ButtonDevice from './components/ButtonDevice';
+import SensorWidget from './components/SensorWidget';
 
 
 const App = () => {
@@ -27,6 +28,8 @@ const App = () => {
       <ButtonDevice title={"Light"} onClick={handleClick}></ButtonDevice>
       <ButtonDevice title={"Light"} onClick={handleClick}></ButtonDevice>
       </div>
+
+      <SensorWidget sensorName={'Humidifier'} cO2Level={'800'} tempreture={27.5} airHumidity={56} battery={80}></SensorWidget>
     </div>
   );
 };

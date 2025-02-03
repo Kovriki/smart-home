@@ -1,10 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React from 'react';  
 import Button from './components/Button';
 import Header from './components/Header';
 import ButtonDevice from './components/ButtonDevice';
 import SensorWidget from './components/SensorWidget';
+import DeviceCard from './components/DeviceCard';
 
 
 const App = () => {
@@ -22,12 +23,13 @@ const App = () => {
 
   return (
     <div className='body'>
-      <Button title={"Click"} onClick={handleClick}></Button>
-      <Header title={"Rooms"} pages={pages}/>
+      <Button title={"Click"} onClick={handleClick} />
+      <Header title={"Rooms"} pages={pages} />
       <div className='grid'>
-      <ButtonDevice title={"Light"} onClick={handleClick}></ButtonDevice>
-      <ButtonDevice title={"Light"} onClick={handleClick}></ButtonDevice>
+      <ButtonDevice title={"Light"} onClick={handleClick} />
+      <ButtonDevice title={"Light"} onClick={handleClick} />
       </div>
+      <DeviceCard />
 
       <SensorWidget sensorName={'Humidifier'} cO2Level={'800'} tempreture={27.5} airHumidity={56} battery={80}></SensorWidget>
     </div>

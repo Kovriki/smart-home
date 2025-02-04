@@ -1,0 +1,10 @@
+.iconButton{
+    display: inline-flex;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0px solid;
+    cursor: pointer;
+}

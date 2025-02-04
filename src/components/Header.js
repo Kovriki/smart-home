@@ -1,13 +1,8 @@
-// import React from 'react';
 import React, { useState } from 'react';
 import '../styles/Header.css';
+import IconButton from './ButtonIcon';
 
-// function Header ({ text, onClick }) {
-// }
-// export default Header;
-
-
-const Header = ({ title, pages }) => {
+function Header({ title, pages }) {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,23 +11,25 @@ const Header = ({ title, pages }) => {
     };
 
     return (
-        <header classname="header">
+        <header classname="topBar">
+            <IconButton iconName={"alert"} onClick={toggleMenu} />
             <h1>{title}</h1>
-            <button className='menu-btn' onClick={toggleMenu}> ☰ Меню</button>
+            <IconButton iconName={"menu"} onClick={toggleMenu} />
 
-        {isMenuOpen && (
-            <nav classname="menu">
-                <ul>
-                    {pages.map((page, index) => (
-                        <li key={index}>
-                            <a href={page.link}>{page.name}</a>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-        )}
+
+            {isMenuOpen && (
+                <nav classname="menu1">
+                    <ul>
+                        {pages.map((page, index) => (
+                            <li key={index}>
+                                <a href={page.link}>{page.name}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            )}
         </header>
-    )
+    );
 }
 
 export default Header;

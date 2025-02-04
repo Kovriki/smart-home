@@ -2,8 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import { motion } from "framer-motion";
 import '../styles/DeviceCard.css';
+import IconButton from './ButtonIcon';
 
-function DeviceCard()  {
+function DeviceCard({deviceName})  {
 
     const [isButtonActive, setIsButtonActive] = useState(false);
     const [isCardModalOpen, setIsCardModalOpen] = useState(false);
@@ -15,40 +16,32 @@ function DeviceCard()  {
         setIsButtonActive((prev) => !prev);
     };
 
-
     const handleMouseDown = () => {
         holdTimer = setTimeout(() => {
             setIsCardModalOpen(true);
         }, 600);
     };
 
-
     const handleMouseUp = () => {
         clearTimeout(holdTimer);
     };
 
     return(
-        <div className='relative'>
+        <div className='card'>
             <motion.div        
-                className="card"
+                className='cardContent'
                 onClick={handleClick}
                 onMouseDown={handleMouseDown}
                 onMouseUp={handleMouseUp}
                 onTouchStart={handleMouseDown}
                 onTouchEnd={handleMouseUp}>
 
-                <p>Light</p>
-
-                {/* <Button title={"Click"} onClick={handleClick} /> */}
-
-                {/* Кнопка внутри карточки */}
-                <button
-                className={`inner-button ${isButtonActive ? "active" : ""}`}
-                onClick={(e) => {
+                <IconButton iconName={'deviceInfo'} onClick={(e) => {
                     e.stopPropagation();
                     setIsButtonModalOpen(true);
-                }}
-                ></button>
+                }} className={'deviceInfoButton'}/>
+
+                <p>{deviceName}</p>
 
             </motion.div>
 

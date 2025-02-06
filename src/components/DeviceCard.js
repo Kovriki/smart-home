@@ -14,6 +14,7 @@ function DeviceCard({deviceName})  {
 
     const handleClick = () => {
         setIsButtonActive((prev) => !prev);
+        console.log('active btn')
     };
 
     const handleMouseDown = () => {
@@ -27,7 +28,7 @@ function DeviceCard({deviceName})  {
     };
 
     return(
-        <div className='card'>
+        <div className={isButtonActive ? 'cardActive' : 'card'}>
             <motion.div        
                 className='cardContent'
                 onClick={handleClick}

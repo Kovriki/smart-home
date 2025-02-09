@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Header.css';
 import IconButton from './ButtonIcon';
+import ModalPage from './ModalPage';
 
 function Header({ title, pages }) {
 
@@ -18,15 +19,16 @@ function Header({ title, pages }) {
 
 
             {isMenuOpen && (
-                <nav classname="menu1">
-                    <ul>
-                        {pages.map((page, index) => (
-                            <li key={index}>
-                                <a href={page.link}>{page.name}</a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
+                <ModalPage />
+                // <nav classname="menu1">
+                //     <ul>
+                //         {pages.map((page, index) => (
+                //             <li key={index}>
+                //                 <a href={page.link}>{page.name}</a>
+                //             </li>
+                //         ))}
+                //     </ul>
+                // </nav>
             )}
         </header>
     );

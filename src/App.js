@@ -32,9 +32,8 @@ const App = () => {
         <ButtonDevice title={"Light"} onClick={handleClick} /> */}
       <DeviceCard deviceName={'Light'} />
       <DeviceCard deviceName={'LED Strip'} />
-
+      <DeviceCard deviceName={'Lamp'} size={'m'} />
         </div>
-      <DeviceCard deviceName={'Lamp'} />
         
       </div>
 

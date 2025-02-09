@@ -1,10 +1,11 @@
 import React from 'react';
+import cn from 'classnames';
 import { useState } from 'react';
 import { motion } from "framer-motion";
 import '../styles/DeviceCard.css';
 import IconButton from './ButtonIcon';
 
-function DeviceCard({deviceName})  {
+function DeviceCard({deviceName, size})  {
 
     const [isButtonActive, setIsButtonActive] = useState(false);
     const [isCardModalOpen, setIsCardModalOpen] = useState(false);
@@ -28,7 +29,7 @@ function DeviceCard({deviceName})  {
     };
 
     return(
-        <div className={isButtonActive ? 'cardActive' : 'card'}>
+        <div className={cn('card', {'cardActive': isButtonActive, 'm': size})} >
             <motion.div        
                 className='cardContent'
                 onClick={handleClick}
